@@ -104,15 +104,32 @@
                 // jenis surat
                 jenisSurat = tr[i].getElementsByTagName("td")[3];
 
-                if (judul) {
-                    txtJudul = judul.value;
-                    alert(txtJudul);
-                //   if (txtJudul.toUpperCase().indexOf(filter) > -1) {
-                //     tr[i].style.display = "";
-                //   } else {
-                //     tr[i].style.display = "none";
-                //   }
-                }       
+                if(judul) {
+                    txtJudul = judul.textContent || judul.innerText;
+                    if (txtJudul.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+                if(tgl) {
+                    dateTgl = tgl.textContent || tgl.innerText;
+                    if (txtJudul.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+                if(judul) {
+                    txtJudul = judul.textContent || judul.innerText;
+                    if (txtJudul.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+                
+
               }
             }
         </script>
